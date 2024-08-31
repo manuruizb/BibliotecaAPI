@@ -7,7 +7,7 @@ Una biblioteca local está digitalizando su catálogo de libros y quiere crear u
 La API deberá gestionar información básica sobre los libros, como el título, autor, fecha de publicación, género, y si están disponibles o prestados.
 '''
 
-class Libro(models.Model):
+class Libros(models.Model):
     idStatus = models.ForeignKey(Status, on_delete=models.CASCADE, blank=False)
     titulo = models.CharField(verbose_name='Titulo', max_length=100, blank=False, null=False)
     autor = models.CharField(verbose_name='Autor', max_length=50, blank=False, null=False)
