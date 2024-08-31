@@ -8,6 +8,11 @@ La API deberá gestionar información básica sobre los libros, como el título,
 '''
 
 class Libros(models.Model):
+    
+    class Meta: 
+        verbose_name = "Libros"
+        verbose_name_plural = "Libros"
+    
     idStatus = models.ForeignKey(Status, on_delete=models.CASCADE, blank=False)
     titulo = models.CharField(verbose_name='Titulo', max_length=100, blank=False, null=False)
     autor = models.CharField(verbose_name='Autor', max_length=50, blank=False, null=False)
