@@ -9,7 +9,7 @@ class Status(models.Model):
         verbose_name_plural = "Status"
 
 
-    statu = models.CharField('Estado', max_length=100)
+    status = models.CharField('Estado', max_length=100)
 
     def __str__(self):
-        return f"{self.statu}"
+        return f"{self.status}"
